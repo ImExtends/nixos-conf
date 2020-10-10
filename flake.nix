@@ -161,15 +161,19 @@
                     "nixpkgs=${channels.pkgs}"
                     "nixos-config=/nixos-conf/default.nix"
                   ];
-                  system.extraSystemBuilderCmds = let
-                    inp = lib.mapAttrsToList lib.nameValuePair inputs;
-                  in ''
-                    mkdir -p $out/flake/input
+                  system.extraSystemBuilderCmds =
+                    let
+                      inp = lib.mapAttrsToList lib.nameValuePair inputs;
+                    in
+                    ''
+                                          mkdir -p $out/flake/input
 
-                    ${lib.concatMapStringsSep "\n" ({name, value}: ''
-                      ln -s '${value}' $out/flake/input/${name}
-                    '') inp}
-                  ''; 
+                                          ${lib.concatMapStringsSep "\n"
+                      ({ name, value }: ''
+                                            ln -s '${value}' $out/flake/input/${name}
+                                          '')
+                      inp}
+                    '';
                   system.activationScripts.etcnixos = ''
                     rm -rf /etc/nixos
                     ln -sfn /run/current-system/flake/input/self /etc/nixos || \
