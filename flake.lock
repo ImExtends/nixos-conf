@@ -1,0 +1,167 @@
+{
+  "nodes": {
+    "flake-utils": {
+      "locked": {
+        "lastModified": 1598466101,
+        "narHash": "sha256-JPhv+Ay98KMWRVRFlLEK9+eLpvNjhTBGWdFKZsE97ck=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "a586a6b966d59f53f45a04f8891fbc017dc09dbe",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "hardware": {
+      "locked": {
+        "lastModified": 1600019032,
+        "narHash": "sha256-o/PxAWx2O85NyQRDuhZ5QbAACA5yyglmA7hN9GSI27g=",
+        "owner": "NixOS",
+        "repo": "nixos-hardware",
+        "rev": "684eaddf74109b2bedb8b585a25714eb9ea5c54e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "master",
+        "repo": "nixos-hardware",
+        "type": "github"
+      }
+    },
+    "home": {
+      "inputs": {
+        "nixpkgs": [
+          "stable"
+        ]
+      },
+      "locked": {
+        "lastModified": 1600992519,
+        "narHash": "sha256-Y9wlciB/g1QUquVpTZXQq23I5r8qJ4nZArfczTYBo24=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "abfb4cde51856dbee909f373b59cd941f51c2170",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "type": "github"
+      }
+    },
+    "manix": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1600615040,
+        "narHash": "sha256-+j72HR7PaZ8NhX2cwwuAMhR6I5K/vaxgRex71zZgu9c=",
+        "owner": "mlvzk",
+        "repo": "manix",
+        "rev": "5d033e12798d4f29e43042467025a256b63f0f71",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mlvzk",
+        "repo": "manix",
+        "type": "github"
+      }
+    },
+    "master": {
+      "locked": {
+        "lastModified": 1601398129,
+        "narHash": "sha256-crMo19Pb+E8F7arIEVgycZJFuo3lq1tFz69eKWPMlRs=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "372884ffa528ad5c6eaf9b09afd10e46d1e152f4",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "master",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1599050737,
+        "narHash": "sha256-jxUhBQ49DYMnL17SrPNGTEp+Wb5Pj89CxW8OLwnXl1g=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "18348c7829ae93ebe436497ca7ad96cdb8d39935",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nur": {
+      "inputs": {
+        "nixpkgs": [
+          "stable"
+        ]
+      },
+      "locked": {
+        "lastModified": 1598132767,
+        "narHash": "sha256-PdmA5ubVNvbeL6NOLwrvTquw29JoXmhFrAaNAQgX3IY=",
+        "owner": "ImExtends",
+        "repo": "NUR",
+        "rev": "24a001d7789ec53db33393e90b3ea1ab1535a9e0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ImExtends",
+        "repo": "NUR",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "hardware": "hardware",
+        "home": "home",
+        "manix": "manix",
+        "master": "master",
+        "nur": "nur",
+        "stable": "stable",
+        "unstable": "unstable"
+      }
+    },
+    "stable": {
+      "locked": {
+        "lastModified": 1601106866,
+        "narHash": "sha256-sIVuwrZw2rXK9hio+RHgcl1jv8CRcmjW+UfO7Kqfn3Y=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "a9226f2b3a52fcbbc5587d2fa030729e714f40fe",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "nixos-20.09",
+        "type": "indirect"
+      }
+    },
+    "unstable": {
+      "locked": {
+        "lastModified": 1600913051,
+        "narHash": "sha256-9PDPLwaZ/QzafO3M/yCeGWraI20fJNnGz7nzAfZsDes=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "dfd2eeabd6e1be22676dac26854a2de21c3d4c87",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "nixpkgs-unstable",
+        "type": "indirect"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
