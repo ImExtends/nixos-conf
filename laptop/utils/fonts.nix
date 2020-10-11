@@ -11,7 +11,7 @@ in
 
     fonts = {
       enableDefaultFonts = true;
-      enableFontDir = true;
+      fontDir.enable = true;
 
       fonts = with pkgs; [
         nerd-fonts.droidsansmono
