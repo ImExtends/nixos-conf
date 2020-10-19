@@ -152,9 +152,6 @@
           flakeHost = hname: with lib;
             let
               modules = [
-                ./default.nix
-                files
-                home
                 {
                   system.configurationRevision = lib.mkIf (inputs.self ? rev) inputs.self.rev;
                   nix.nixPath = lib.mkForce [
@@ -194,6 +191,9 @@
                   environment.etc.nixpkgs.source = inputs.stable;
                   nixpkgs.pkgs = pkgs;
                 }
+                ./default.nix
+                files
+                home
                 home-manager
                 inputs.stable.nixosModules.notDetected
                 inputs.hardware.nixosModules.asus-fx504gd
