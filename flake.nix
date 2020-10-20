@@ -99,7 +99,7 @@
               channelToOverlay {
                 inherit system config;
                 flake = "stable";
-                branch = "nixos-20.03";
+                branch = "nixos-20.09";
               }
             )
           ] ++ [ inputs.nur.overlay ];
