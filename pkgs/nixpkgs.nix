@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
-    master.discord
+    (import ./discord_patched.nix {})
   ];
 }
