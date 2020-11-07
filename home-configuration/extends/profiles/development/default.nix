@@ -34,6 +34,7 @@ in
       tokei
       nmap
       rnix-lsp
+      texlive.combined.scheme-basic
 
       system-config-printer
 
