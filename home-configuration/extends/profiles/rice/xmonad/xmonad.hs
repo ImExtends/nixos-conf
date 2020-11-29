@@ -49,7 +49,7 @@ myModMask       = mod1Mask
 myScreenTools :: [(String, X())]
 myScreenTools = [
                   ("Gif recorder", spawn (scriptFile "screengif.sh") >> notify "gif" "Use M-S-g to stop gif-recording")
-                , ("Screenshot-copy", spawn (scriptFile "screenshot.sg") >> notify "Screenshot" "Screenshot taken, pasted to clipboard")
+                , ("Screenshot-copy", spawn (scriptFile "screenshot.sh") >> notify "Screenshot" "Screenshot taken, pasted to clipboard")
                 ]
 
 myKeys = concat [ myMediaKeys, myOtherKeys, myWSKeys, myScreenKeys ] 
