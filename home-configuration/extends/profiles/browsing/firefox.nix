@@ -1,4 +1,4 @@
-{ pkgs }:
+{ pkgs, ... }:
 {
   programs.firefox = {
     enable = true;
@@ -7,7 +7,8 @@
       dark-night-mode
       vimium
     ];              
-    profiles = {
+    profiles.extends = {
+      id = 0;
       name = "Extends";
       settings = {};
       isDefault = true;
