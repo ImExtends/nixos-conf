@@ -191,6 +191,7 @@
                   environment.etc.nixpkgs.source = inputs.stable;
                   nixpkgs.pkgs = pkgs;
                 }
+                ./home-configuration/extends/profiles/browsing/firefox.nix
                 ./default.nix
                 files
                 home
