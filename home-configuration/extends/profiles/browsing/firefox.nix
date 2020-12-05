@@ -11,6 +11,6 @@
       name = "Extends";
       settings = {};
       isDefault = true;
-    }
-  }                                
+    };
+  };                             
 }  
