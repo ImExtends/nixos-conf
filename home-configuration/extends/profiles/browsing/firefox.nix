@@ -8,7 +8,6 @@
       vimium
     ];              
     profiles.extends = {
-      id = 0;
       name = "Extends";
       settings = {};
       isDefault = true;
