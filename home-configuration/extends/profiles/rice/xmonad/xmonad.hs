@@ -134,7 +134,7 @@ myManageHook = composeAll . concat $
     , [ className =? "electronplayer" --> doShift "4" ]
     , [ className =? "Spotify"        --> doShift "4" ]
     , [ className =? "qutebrowser"    --> doShift "2" ]
-    , [ className =? "Firefox"        --> doShift "2" ]
+    , [ className =? "Chromium-browser"        --> doShift "2" ]
     , [ className =? "Gimp"           --> doShift "5" ]
     , [ className =? "kitty"          --> doFloat ]
     ]
@@ -158,7 +158,7 @@ myStartupHook = do
         spawnOnce "electronplayer"
         spawnOnce "feh --bg-scale /home/extends/Images/Wallpapers/background.png"
         spawnOnce "xautolock -time 35 -locker 'betterlockscreen --lock blur -u /home/extends/Images/Wallpapers/background.png' &"
-	spawnOnce "firefox"
+	spawnOnce "chromium"
 	spawnOnce "Discord"
 	spawn "numlockx"
 
