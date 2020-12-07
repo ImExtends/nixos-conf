@@ -4,7 +4,7 @@ let
   quteBrowser = import ./qutebrowser.nix;
 in
   {
-    imports = [ ./firefox.nix ];
+    imports = [ ./firefox.nix ./chromium.nix ];
   options.profiles.browsing = {
     enable = lib.mkEnableOption "Profile to browse with qutebrowser";
   };
