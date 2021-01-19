@@ -39,7 +39,7 @@ in
         allowedUDPPorts = [ 4294 984 ];
       };
 
-      wg-quick.interfaces = {
+/*      wg-quick.interfaces = {
         wg0 = {
           address = [ "10.6.0.2/24" ];
           peers = [
@@ -55,12 +55,20 @@ in
           dns = [ "10.6.0.1" ];
         };
       };
-    };
+    }; */
 
-    services.openssh = {
-      enable = true;
-      ports = [ 48896 ];
-      permitRootLogin = "yes";
+    services = {
+      openssh = {
+        enable = true;
+        ports = [ 48896 ];
+        permitRootLogin = "yes";
+      };
+
+      avahi = {
+        nssmdns = true;
+        enable = true;
+
+      };
     };
 
     virtualisation.docker.enable = true;
