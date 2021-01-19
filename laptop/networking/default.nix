@@ -54,8 +54,8 @@ in
           privateKeyFile = "/home/extends/.nix-tests/.pvk";
           dns = [ "10.6.0.1" ];
         };
-      };
-    }; */
+      };*/
+    }; 
 
     services = {
       openssh = {
@@ -67,7 +67,6 @@ in
       avahi = {
         nssmdns = true;
         enable = true;
-
       };
     };
 
