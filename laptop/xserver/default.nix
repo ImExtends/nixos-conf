@@ -16,8 +16,10 @@ in
 
       libinput = {
         enable = true;
-        scrollMethod = "twofinger";
-        tapping = false;
+	touchpad = {
+	    scrollMethod = "twofinger";
+            tapping = false;
+	  };
       };
 
       #windowManager.i3.enable = true;
