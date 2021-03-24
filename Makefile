@@ -1,8 +1,10 @@
+HOST := $(shell hostname)
+
 build:
-	sudo nixos-rebuild switch --flake '.#sigma'
+	nix flake update && sudo nixos-rebuild switch --flake '.#$(HOST)' -I ./default.nix
 
 flake:
 	nix flake update --recreate-lock-file --commit-lock-file
 
 total-build: build flake
-	build flake
+	flake build
