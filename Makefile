@@ -6,5 +6,5 @@ build:
 flake:
 	nix flake update --recreate-lock-file --commit-lock-file
 
-total-build: build flake
+total-build: flake build
 	flake build
