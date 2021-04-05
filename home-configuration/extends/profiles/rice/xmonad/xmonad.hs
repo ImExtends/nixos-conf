@@ -1,5 +1,5 @@
 import XMonad
-import qualified Rofi as Rofi
+{- import qualified Rofi as Rofi-}
 
 import XMonad.Layout.IndependentScreens
 
@@ -46,11 +46,11 @@ notify notificationTitle notificationMessage = safeSpawn "notify-send" [notifica
 myBorderWidth   = 0
 myModMask       = mod1Mask
 
-myScreenTools :: [(String, X())]
+{-myScreenTools :: [(String, X())]
 myScreenTools = [
                   ("Gif recorder", spawn (scriptFile "screengif.sh") >> notify "gif" "Use M-S-g to stop gif-recording")
                 , ("Screenshot-copy", spawn (scriptFile "screenshot.sh") >> notify "Screenshot" "Screenshot taken, pasted to clipboard")
-                ]
+                ]-}
 
 myKeys = concat [ myMediaKeys, myOtherKeys, myWSKeys, myScreenKeys ] 
     where
@@ -66,7 +66,7 @@ myKeys = concat [ myMediaKeys, myOtherKeys, myWSKeys, myScreenKeys ]
   
     myScreenKeys :: [(String, X())]
     myScreenKeys = [
-                     ("M-e", Rofi.promptRunCommand def myScreenTools)
+                    --("M-e", Rofi.promptRunCommand def myScreenTools)
 		   ]
 
 
