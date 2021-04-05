@@ -5,7 +5,10 @@ build:
 
 flake:
 	nix flake update 
-	nix build '.#sigma'
+	sudo nix build --profile /nix/var/nix/profiles/system/ .#nixosConfigurations.sigma.config.system.build.toplevel
+
+rebuild:
+	sudo nix build --profile /nix/var/nix/profiles/system/ .#nixosConfigurations.sigma.config.system.build.toplevel
 
 total-build: flake build
 	flake build
