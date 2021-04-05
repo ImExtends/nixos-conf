@@ -5,7 +5,7 @@ build:
 
 flake:
 	nix flake update 
-	nix build
+	nix build .#sigma
 
 total-build: flake build
 	flake build
