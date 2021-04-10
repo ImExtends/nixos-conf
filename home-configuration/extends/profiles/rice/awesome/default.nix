@@ -3,7 +3,7 @@
   enable = true;
   package = pkgs.awesome;
 
-  luaModules = with pkgs; [ luaPackages.ruled ];
+  #luaModules = with pkgs; [ luaPackages.ruled ];
 
   noArgb = true;
 }
