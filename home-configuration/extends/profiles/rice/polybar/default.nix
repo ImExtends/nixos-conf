@@ -35,8 +35,8 @@ in
 
       radius = 0;
 
-      modules-left = "nixos-icon";
-      modules-center = "center";
+      modules-left = "nixos-icon date";
+      modules-center = "title";
       modules-right = "date";
 
       locale = "fr_FR.UTF-8";
