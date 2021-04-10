@@ -226,3 +226,4 @@ polybarHook dbus =
           }
 
 myPolybarLogHook dbus = myLogHook <+> dynamicLogWithPP (polybarHook dbus)
+myLogHook = fadeInactiveLogHook 0.9
