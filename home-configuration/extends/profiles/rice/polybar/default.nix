@@ -7,7 +7,7 @@ let
   ac = "#1E88E5";
   mf = "#383838";
 
-  bg = "${"xrdb:background"}";
+  bg = "#00000000";
   fg = "#FFFFFF";
 
   # Colored
@@ -32,7 +32,6 @@ in {
     enable = true;
 
     package = pkgs.polybar.override {
-      i3GapsSupport = true;
       alsaSupport = true;
     };
 
@@ -54,9 +53,6 @@ in {
         height = 19;
         offset-x = "1%";
 
-        scroll-up = "i3wm-wsnext";
-        scroll-down = "i3wm-wsprev";
-
         background = bg;
         foreground = fg;
 
@@ -65,7 +61,7 @@ in {
         font-0 = "FuraCode Nerd Font:size=12;3";
         font-1 = "FuraCode Nerd Font:style=Bold:size=12;3";
 
-        modules-left = "distro-icon dulS ddrT i3 dulT";
+        modules-left = "distro-icon dulS ddrT xmonad dulT";
         modules-center = "title";
         modules-right = "durT audio ddlT date";
 
@@ -107,10 +103,6 @@ in {
       };
 
       "settings" = {
-        throttle-output = 5;
-        throttle-output-for = 10;
-        throttle-input-for = 30;
-
         screenchange-reload = true;
 
         compositing-background = "source";
