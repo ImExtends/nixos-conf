@@ -26,8 +26,12 @@
     corner-radius = 10.0;
     clear-shadow = true;
     frame-opacity = 0.7;
+
     blur-method = "dual_kawase";
-    blur-strength = 8;
+    blur-strength = 10;
+    blur-size = 14;
+    blur-background-frame = false;
+
     alpha-step = 0.06;
     detect-client-opacity = true;
     detect-rounded-corners = true;
