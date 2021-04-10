@@ -75,7 +75,7 @@ in
 
     #Modules
 
-    "modules/nixos-icon" = {
+    "module/nixos-icon" = {
       type = "custom/script";
       exec = "uname -r | cut -d- -f1";
       interval = "99999999";
