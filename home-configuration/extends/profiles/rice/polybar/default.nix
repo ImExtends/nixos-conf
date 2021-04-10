@@ -35,9 +35,9 @@ in
 
       radius = 0;
 
-      modules-left = "nixos-icon date";
-      modules-center = "";
-      modules-right = "";
+      modules-left = "nixos-icon";
+      modules-center = "center";
+      modules-right = "date";
 
       locale = "fr_FR.UTF-8";
     };
@@ -75,13 +75,20 @@ in
 
     #Modules
 
+    "module/title" = {
+      type = "internal/xwindow";
+      format = "<label>";
+      label = "%title%";
+      label-maxlen = 70;
+    };
+
     "module/nixos-icon" = {
       type = "custom/script";
       exec = "uname -r | cut -d- -f1";
       interval = "99999999";
 
       format = " <label>";
-      format-background = background;
+      format-background = "#bfffff";
       format-foreground = foreground;
       format-padding = 1;
 
@@ -98,10 +105,12 @@ in
       time-alt = "%Y-%m-%d";
 
       format = "<label>";
-      format-padding = 4;
+      format-padding = 1;
       format-foreground = foreground;
+      format-background = "#b960a7";
 
       label = "%time%";
+      label-font = 2;
     };
   };
 }
