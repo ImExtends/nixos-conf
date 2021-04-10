@@ -5,7 +5,7 @@ if [ (tty | string sub -s 1 -l 8) = "/dev/tty" ];
 end
 
 function fish_prompt
-    set_color blue
+    set_color pink
     __custom_prompt_whoami
     set_color normal
     __custom_prompt_pwd
@@ -20,7 +20,7 @@ function __custom_prompt_whoami --description "returns username and hostname"
     printf (whoami)
     set_color white
     printf '@'
-    set_color blue
+    set_color pink
     printf (hostname)
     set_color white
     __custom_prompt_separator
