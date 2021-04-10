@@ -35,7 +35,7 @@ in
 
       radius = 0;
 
-      modules-left = "date";
+      modules-left = "nixos-icon date";
       modules-center = "";
       modules-right = "";
 
