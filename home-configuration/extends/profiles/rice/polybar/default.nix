@@ -217,6 +217,13 @@ in {
         label = "%time%";
       };
 
+      "module/title" = {
+        type = "internal/xwindow";
+        format = "<label>";
+        label = "%title%";
+        label-maxlen = 70;
+      };
+
       "module/xmonad" = {
         type = "custom/script";
         exec = "${pkgs.xmonad-log}/bin/xmonad-log";
