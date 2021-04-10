@@ -6,6 +6,7 @@
     font_family = "DejaVuSansMono Nerd Font Mono";
     background = "#191918";
     window_padding_width = 20;
+    background_opacity = 0.85;
   };
 
   keybindings = {
