@@ -6,6 +6,7 @@
       xmonad-extras
       xmonad
       monad-logger
+      dbus
     ];
   enableContribAndExtras = true;
 
