@@ -24,7 +24,7 @@
     color4 #d65007
     color5 #c795ae
 
-    color6 #95aec7
+    color6 #df002d
     color7 #c7ccd1
 
     # bright
