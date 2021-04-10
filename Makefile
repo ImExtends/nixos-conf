@@ -1,7 +1,7 @@
 HOST := $(shell hostname)
 
 build:
-	rm /home/extends/.xmonad/xmonad-x86_64-linux && sudo nixos-rebuild switch --flake '.#$(HOST)' -I ./default.nix
+	sudo nixos-rebuild switch --flake '.#$(HOST)' -I ./default.nix
 
 flake:
 	nix flake update 
