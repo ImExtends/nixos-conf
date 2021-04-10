@@ -1,1 +1,1 @@
-require("bar.wibar.lua")
+require("ui.bar.wibar")
