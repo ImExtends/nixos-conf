@@ -2,7 +2,6 @@
 let
   background = "#bf1692";
   foreground = "#ffffff";
-
 in
 {
   enable = true;
@@ -65,7 +64,7 @@ in
 
       format = "<label>";
       format-padding = 4;
-      format-foreground = fg;
+      format-foreground = foreground;
 
       label = "%time%";
     };
