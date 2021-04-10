@@ -35,7 +35,7 @@ in
 
     home.file.".xmonad/lib/Rofi.hs".text =
       builtins.readFile ./xmonad/lib/Rofi.hs;
-    xdg.configFile."awesome/rc.lua".text = 
+    home.file.".config/awesome/rc.lua".text = 
       builtins.readFile ./awesome/rc.lua;
 
     xsession = {
