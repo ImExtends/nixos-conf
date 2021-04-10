@@ -31,7 +31,7 @@ in
     services = lib.mkIf config.xsession.windowManager.xmonad.enable {
       picom = import ./picom/picom.nix { inherit pkgs; };
       dunst = import ./dunst { };
-      #    polybar = import ./polybar { inherit pkgs; };
+      polybar = import ./polybar { inherit pkgs; };
     };
 
     home.file.".xmonad/lib/Rofi.hs".text =
