@@ -21,7 +21,7 @@
     color2 #95c7ae
     color3 #aec795
 
-    color4 #ab0b34
+    color4 #ab340b
     color5 #c795ae
 
     color6 #95aec7
