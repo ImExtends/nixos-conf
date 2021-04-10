@@ -8,6 +8,8 @@ local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup").widget
 require("awful.hotkeys_popup.keys")
 
+local ui = require("ui")
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -123,9 +125,10 @@ screen.connect_signal("property::geometry", set_wallpaper)
 awful.screen.connect_for_each_screen(function(s)
     -- Wallpaper
     set_wallpaper(s)
+
+    ui.bar.wibar
 end)
 -- }}}
-require("ui")
 
 -- {{{ Mouse bindings
 root.buttons(gears.table.join(
