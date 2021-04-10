@@ -82,7 +82,7 @@ in
 
       format = " <label>";
       format-background = background;
-      format-foreground = background;
+      format-foreground = foreground;
       format-padding = 1;
 
       label = "%output%";
