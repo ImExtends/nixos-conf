@@ -25,7 +25,6 @@ in
         lxappearance
         betterlockscreen
         spotify
-        haskellPackages.xmobar
       ];
 
     services = lib.mkIf config.xsession.windowManager.xmonad.enable {
@@ -36,16 +35,20 @@ in
 
     home.file.".xmonad/lib/Rofi.hs".text =
       builtins.readFile ./xmonad/lib/Rofi.hs;
+    xdg.configFile."awesome/rc.lua".text = 
+      builtins.readFile ./awesome/rc.lua;
 
     xsession = {
       enable = true;
-      windowManager.xmonad = import ./xmonad { inherit pkgs; };
+      #windowManager.xmonad = import ./xmonad { inherit pkgs; };
+      windowManager.awesome = import ./awesome { inherit pkgs; };
     };
 
     programs = lib.mkIf
       (
         config.xsession.windowManager.xmonad.enable
         || config.xsession.windowManager.i3.enable
+        || config.xsession.windowManager.awesome.enable
       )
       {
         rofi = import ./rofi { inherit pkgs; };

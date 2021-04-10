@@ -27,7 +27,7 @@ in
           };
         };
       };
-      defaultSession = "none+xmonad";
+      defaultSession = "none+awesome";
     };
   };
 }
