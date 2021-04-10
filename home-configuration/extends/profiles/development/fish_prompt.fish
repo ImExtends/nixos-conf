@@ -46,7 +46,7 @@ end
 
 ## Git related things
 function __custom_prompt_git --description "git part of the prompt"
-    set_color blue
+    set_color $pink
     __custom_prompt_git_branch
     set_color normal
     __custom_prompt_separator
