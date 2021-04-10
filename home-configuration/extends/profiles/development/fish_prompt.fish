@@ -1,4 +1,5 @@
 set primary (cat /home/extends/.primary)
+set pink (cat /home/extends/.pink)
 set separator " → " 
 if [ (tty | string sub -s 1 -l 8) = "/dev/tty" ];
     set separator " > "
