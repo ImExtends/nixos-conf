@@ -32,7 +32,7 @@ in
 
       radius = 0;
 
-      modules-left = "";
+      modules-left = "date";
       modules-center = "";
       modules-right = "";
 
