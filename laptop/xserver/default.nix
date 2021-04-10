@@ -9,21 +9,28 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    services.xserver = {
-      enable = true;
-      layout = "fr";
-      xkbOptions = "eurosign:e";
-
-      libinput = {
+    services = {
+      xserver = {
         enable = true;
-	touchpad = {
-	    scrollMethod = "twofinger";
+        layout = "fr";
+        xkbOptions = "eurosign:e";
+
+        libinput = {
+          enable = true;
+	        touchpad = {
+	          scrollMethod = "twofinger";
             tapping = false;
-	  };
+	        };
+        };
+
+        #windowManager.i3.enable = true;
+        windowManager.xmonad.enable = true;
       };
 
-      #windowManager.i3.enable = true;
-      windowManager.xmonad.enable = true;
+      dbus = {
+        enable = true;
+        packages = [ pkgs.gnome3-dconf ];
+      };
     };
   };
 }

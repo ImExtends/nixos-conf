@@ -2,8 +2,8 @@
   enable = true;
   extraPackages = haskellPackages:
     with haskellPackages; [
-      #xmonad-contrib
-      #xmonad-extras
+      xmonad-contrib
+      xmonad-extras
       xmonad
       monad-logger
     ];

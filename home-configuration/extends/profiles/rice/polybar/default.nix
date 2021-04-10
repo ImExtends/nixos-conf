@@ -29,7 +29,6 @@ let
   urgency = "#e74c3c";
 
 in {
-  services.polybar = {
     enable = true;
 
     package = pkgs.polybar.override {
@@ -456,5 +455,4 @@ in {
         content-background = bg;
       };
     };
-  };
 }
