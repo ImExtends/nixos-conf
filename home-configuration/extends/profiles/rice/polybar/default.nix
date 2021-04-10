@@ -1,6 +1,6 @@
 { pkgs, ... }:
 let
-  background = "#bf1692";
+  background = "#00000000";
   foreground = "#ffffff";
 in
 {
@@ -30,6 +30,9 @@ in
       background = background;
       foreground = foreground;
 
+      font-0 = "FuraCode Nerd Font:size=12;3";
+      font-1 = "FuraCode Nerd Font:style=Bold:size=12;3";
+
       radius = 0;
 
       modules-left = "date";
@@ -52,6 +55,38 @@ in
       compositing-border = "over";
 
       pseudo-transparency = "false";
+    };
+
+    #Gaps transition
+
+    "module/ddlT" = {
+      type = "custom/text";
+      content = "";
+      content-foreground = background;
+      content-background = background;
+    };
+
+    "module/durP" = {
+      type = "custom/text";
+      content = "";
+      content-foreground = background;
+      content-background = background;
+    };
+
+    #Modules
+
+    "modules/nixos-icon" = {
+      type = "custom/script";
+      exec = "uname -r | cut -d- -f1";
+      interval = "99999999";
+
+      format = " <label>";
+      format-background = background;
+      format-foreground = background;
+      format-padding = 1;
+
+      label = "%output%";
+      label-font = 2;
     };
 
     "module/date" = {
