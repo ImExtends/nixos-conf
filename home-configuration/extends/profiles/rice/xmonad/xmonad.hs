@@ -12,6 +12,7 @@ import qualified XMonad.Actions.Commands as XCommands
 import XMonad.Hooks.SetWMName (setWMName)
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.UrgencyHook
+import XMonad.Hooks.FadeInactive  ( fadeInactiveLogHook )
 
 import XMonad.Util.SpawnOnce
 import XMonad.Util.NamedScratchpad
