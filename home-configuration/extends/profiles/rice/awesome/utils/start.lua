@@ -22,6 +22,6 @@ end
 
 
 awful.rules.rules = {
-	{ rule = { class = "Chromium-browser" }, properties = { screen = 2 } },
-	{ rule = { class = "discord" }, properties = { screen = 3 } }
+	{ rule = { instance = "chromium-browser" }, properties = { screen = 2 } },
+	{ rule = { instance = "discord" }, properties = { screen = 3 } }
 }
