@@ -5,6 +5,8 @@
   xdg.configFile."awesome/bar/init.lua".text = builtins.readFile ./bar/init.lua;
   xdg.configFile."awesome/bar/wibar.lua".text = builtins.readFile ./bar/wibar.lua;
   xdg.configFile."awesome/bindings/init.lua".text = builtins.readFile ./bindings/init.lua;
-  xdg.configFile."awesome/bindings/keybindings.lua".text = builtins.readFile ./bindings/keybindings.lua;
-  xdg.configFile."awesome/bindings/mousebindings.lua".text = builtins.readFile ./bindings/mousebindings.lua;
+  xdg.configFile."awesome/bindings/global_keybindings.lua".text = builtins.readFile ./bindings/global_keybindings.lua;
+  xdg.configFile."awesome/bindings/client_keybindings.lua".text = builtins.readFile ./bindings/client_keybindings.lua;
+  xdg.configFile."awesome/bindings/global_mousebindings.lua".text = builtins.readFile ./bindings/global_mousebindings.lua;
+  xdg.configFile."awesome/bindings/client_mousebindings.lua".text = builtins.readFile ./bindings/client_mousebindings.lua;
 }
