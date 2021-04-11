@@ -33,6 +33,8 @@ in
 
         travis
         amarok
+
+        electronplayer
       ]
     ) ++ (
       lib.optionals
