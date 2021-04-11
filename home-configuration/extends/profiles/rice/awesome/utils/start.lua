@@ -12,7 +12,8 @@ do
 		"kitty",
 		"chromium",
 		"Discord",
-		"electronplayer"
+		"electronplayer",
+		"fehbg"
 	}
 
 	for _, i in pairs(cmds) do
@@ -22,6 +23,7 @@ end
 
 
 awful.rules.rules = {
-	{ rule = { class = "chromium-browser" }, properties = { tag = "2" } },
-	{ rule = { class = "discord" }, properties = { tag = "3" } }
+	{ rule = { class = "Chromium-browser" }, properties = { tag = "2" } },
+	{ rule = { class = "discord" }, properties = { tag = "3" } },
+	{ rule = { class = "electronplayer" }, properties = { tag = "4" } }
 }
