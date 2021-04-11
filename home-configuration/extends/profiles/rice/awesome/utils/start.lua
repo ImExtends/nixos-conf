@@ -1,5 +1,4 @@
 local awful = require("awful")
-local tags = awful.screen.focused().selected_tags
 
 -- Screen Padding and Tags
 screen.connect_signal("request::desktop_decoration", function(s)
@@ -23,6 +22,6 @@ end
 
 
 awful.rules.rules = {
-	{ rule = { class = "chromium-browser" }, properties = { tag = tags[1][2] } },
-	{ rule = { class = "discord" }, properties = { tag = tags[1][3] } }
+	{ rule = { class = "chromium-browser" }, properties = { tag = "2" } },
+	{ rule = { class = "discord" }, properties = { tag = "3" } }
 }
