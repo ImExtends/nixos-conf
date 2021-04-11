@@ -68,54 +68,58 @@ keys = gears.table.join(
              }
            end,
            { description = "lua execute prompt", group = "awesome" }),
+  
 
 	-- Standard
 	awful.key({ modkey,            }, "Return", function() awful.spawn(terminal) end,
 						{ description = "open kitty, or any terminal stored in $terminal", group = "launcher" }),
 	awful.key({ modkey,            }, "d", function() awful.spawn("rofi -show drun") end,
-						{ description = "open rofi", group = "launcher" }),
+						{ description = "open rofi", group = "launcher" })
+)
 
-		-- Screen commands
 
-  awful.key({ modkey,           }, "f",
-      function (c)
+client.connect_signal("request::default_keybindings", function()
+  awful.keyboard.append_client_keybindings(
+    { awful.key({ modkey,           }, "f",
+        function (c)
           c.fullscreen = not c.fullscreen
           c:raise()
-      end,
-      { description = "toggle fullscreen", group = "client" }),
-  awful.key({ modkey, "Shift"   }, "q",      function (c) c:kill()                         end,                                         {description = "close", group = "client"}),
-  awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
+        end,
+        { description = "toggle fullscreen", group = "client" }),
+      awful.key({ modkey, "Shift"   }, "q",      function (c) c:kill()                         end,                                         {description = "close", group = "client"}),
+      awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
             {description = "toggle floating", group = "client"}),
-  awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end,
+      awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end,
             {description = "move to master", group = "client"}),
-  awful.key({ modkey,           }, "o",      function (c) c:move_to_screen()               end,
+      awful.key({ modkey,           }, "o",      function (c) c:move_to_screen()               end,
               {description = "move to screen", group = "client"}),
-  awful.key({ modkey,           }, "t",      function (c) c.ontop = not c.ontop            end,
+      awful.key({ modkey,           }, "t",      function (c) c.ontop = not c.ontop            end,
               {description = "toggle keep on top", group = "client"}),
-  awful.key({ modkey,           }, "n",
-        function (c)
+      awful.key({ modkey,           }, "n",
+          function (c)
             c.minimized = true
-        end ,
+          end ,
         {description = "minimize", group = "client"}),
-  awful.key({ modkey,           }, "m",
+      awful.key({ modkey,           }, "m",
         function (c)
             c.maximized = not c.maximized
             c:raise()
         end ,
         {description = "(un)maximize", group = "client"}),
-  awful.key({ modkey, "Control" }, "m",
+      awful.key({ modkey, "Control" }, "m",
         function (c)
             c.maximized_vertical = not c.maximized_vertical
             c:raise()
         end ,
         {description = "(un)maximize vertically", group = "client"}),
-  awful.key({ modkey, "Shift"   }, "m",
+      awful.key({ modkey, "Shift"   }, "m",
         function (c)
             c.maximized_horizontal = not c.maximized_horizontal
             c:raise()
         end ,
         {description = "(un)maximize horizontally", group = "client"})
-)
+    })
+end)
 
 for i = 1, 9 do
     keys = gears.table.join(keys,
