@@ -86,8 +86,7 @@ screen.connect_signal("property::geometry", function(s)
 end) 
 
 awful.screen.connect_for_each_screen(function(s)
-    -- Wallpaper
-    set_wallpaper(s)
+    gears.wallpaper.maximized("/home/extends/Images/Wallpapers/background.png", s)
 end)
 -- }}}
 
