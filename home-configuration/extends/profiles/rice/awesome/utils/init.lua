@@ -1,1 +1,1 @@
-require("utils.start")
+require "start"

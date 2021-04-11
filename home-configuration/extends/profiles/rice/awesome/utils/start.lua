@@ -1,4 +1,4 @@
-require ("awful")
+local awful = require("awful")
 
 do
 	local cmds = 
