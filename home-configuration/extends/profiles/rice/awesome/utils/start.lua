@@ -13,3 +13,9 @@ do
 		awful.spawn.single_instance(i, awful.rules.rules)
 	end
 end
+
+
+awful.rules.rules = {
+	{ rule = { class = "Chromium-browser" }, properties = { tag = tags[1][2] } },
+	{ rule = { class = "discord" }, properties = { tag = tags[1][3] } }
+}
