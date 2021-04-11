@@ -4,8 +4,10 @@ local awful = require("awful")
 screen.connect_signal("request::desktop_decoration", function(s)
     -- Screen padding
     screen[s].padding = {left = 0, right = 0, top = 0, bottom = 0}
-    -- Each screen has its own tag table.
-    awful.tag({"1", "2", "3", "4", "5", "6", "7", "8", "9"}, s, awful.layout.layouts[1])
+end)
+
+awful.screen.connect_for_each_screen(function(s)
+	awful.tag({"1", "2", "3", "4", "5", "6", "7", "8", "9"}, s, awful.layout.layouts[1])
 end)
 
 do
@@ -24,6 +26,6 @@ end
 
 
 awful.rules.rules = {
-	{ rule = { class = "Chromium-browser" }, properties = { tag = tags[1][2] } },
-	{ rule = { class = "discord" }, properties = { tag = tags[1][3] } }
+	{ rule = { class = "Chromium-browser" }, properties = { screen = 2 } },
+	{ rule = { class = "discord" }, properties = { screen = 3 } }
 }
