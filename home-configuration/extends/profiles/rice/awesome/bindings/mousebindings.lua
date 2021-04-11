@@ -10,8 +10,14 @@ root.buttons(gears.table.join(
 client.connect_signal("request::default_mousebindings", function()
     awful.mouse.append_client_mousebindings(
         {
-            awful.button({ modkey }, 3, awful.mouse.client.resize),
-            awful.button({ modkey }, 1, awful.mouse.client.move),
-            awful.button({ }, 1, function (c) client.focus = c; c:raise() end)
+            awful.button({}, 1,
+                         function(c)
+                c:activate{context = "mouse_click"}
+            end), awful.button({modkey}, 1, function(c)
+                c:activate{context = "mouse_click", action = "mouse_move"}
+            end), awful.button({modkey}, 3, function(c)
+                c:activate{context = "mouse_click", action = "mouse_resize"}
+            end)
+        })
         })
     end) 
