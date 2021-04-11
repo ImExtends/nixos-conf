@@ -71,9 +71,9 @@ keys = gears.table.join(
 
 	-- Standard
 	awful.key({ modkey,            }, "Return", function() awful.spawn(terminal) end,
-						{ description = "Open kitty, or any terminal stored in $terminal", group = "launcher" }),
+						{ description = "open kitty, or any terminal stored in $terminal", group = "launcher" }),
 	awful.key({ modkey,            }, "d", function() awful.spawn("rofi -show drun") end,
-						{ description = "open drun", group = "launcher" })
+						{ description = "open rofi", group = "launcher" }),
 
 		-- Screen commands
 
