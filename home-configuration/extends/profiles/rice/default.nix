@@ -6,6 +6,9 @@ in
   options.profiles.rice = {
     enable = lib.mkEnableOption "A profile for ricing :)";
   };
+
+  imports = [ ./awesome/files.nix ];
+
   config = lib.mkIf cfg.enable {
     home.packages = with pkgs;
       [
