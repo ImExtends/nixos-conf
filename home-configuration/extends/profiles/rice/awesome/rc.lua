@@ -17,6 +17,8 @@ require("awful.hotkeys_popup.keys")
 require("utils")
 require("bar")
 require("bindings")
+local clientkeys = require "bindings.client_keybindings"
+local clientmouse = require "bindings.client_mousebindings"
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -91,6 +93,8 @@ awful.rules.rules = {
     { rule = { },
       properties = { border_width = beautiful.border_width,
                      border_color = beautiful.border_normal,
+                     buttons = clientmouse,
+                     keys = clientkeys,
                      focus = awful.client.focus.filter,
                      raise = true,
                      screen = awful.screen.preferred,
