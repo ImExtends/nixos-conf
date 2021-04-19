@@ -20,6 +20,30 @@ in
         extraPackages = ep: [ ep.magit ];
       };
 
+      broot = {
+        enable = true;
+        enableFishIntegration = true;
+
+        skin = {
+          status_normal_fg = "grayscale(18)";
+          status_normal_bg = "grayscale(3)";
+          status_error_fg = "red";
+          status_error_bg = "yellow";
+          tree_fg = "red";
+          selected_line_bg = "grayscale(7)";
+          permissions_fg = "grayscale(12)";
+          size_bar_full_bg = "red";
+          size_bar_void_bg = "black";
+          directory_fg = "lightyellow";
+          input_fg = "cyan";
+          flag_value_fg = "lightyellow";
+          table_border_fg = "red";
+          code_fg = "lightyellow";
+        
+      };
+    };
+  };
+
       fish =
         if cfg.shell == "fish" then import ./fish { inherit pkgs; } else { };
       zsh = if cfg.shell == "zsh" then import ./zsh { inherit config; } else { };
@@ -69,5 +93,4 @@ in
       url = "https://channels.nixos.org/nixos-unstable/nixexprs.tar.xz";
       sha256 = "04fmnr4sdaz7ndvxlk5yd4kihmqbqxpmzsyp9dmqfy5qwr41vv09";
     }/programs.sqlite}";*/
-  };
-}
+  }
