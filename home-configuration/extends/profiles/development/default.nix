@@ -91,4 +91,6 @@ in
       url = "https://channels.nixos.org/nixos-unstable/nixexprs.tar.xz";
       sha256 = "04fmnr4sdaz7ndvxlk5yd4kihmqbqxpmzsyp9dmqfy5qwr41vv09";
     }/programs.sqlite}";*/
-  }
+    
+  };
+}
