@@ -38,16 +38,14 @@ in
           input_fg = "cyan";
           flag_value_fg = "lightyellow";
           table_border_fg = "red";
-          code_fg = "lightyellow";
-        
+          code_fg = "lightyellow";     
       };
     };
-  };
 
       fish =
         if cfg.shell == "fish" then import ./fish { inherit pkgs; } else { };
       zsh = if cfg.shell == "zsh" then import ./zsh { inherit config; } else { };
-    };
+  };
 
     xdg.configFile."fish/functions/fish_prompt.fish".text =
       builtins.readFile ./fish_prompt.fish;
