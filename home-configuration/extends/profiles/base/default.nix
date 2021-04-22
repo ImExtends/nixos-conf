@@ -41,7 +41,7 @@ in
         (
           config.xsession.windowManager.xmonad.enable
             || config.xsession.windowManager.i3.enable
-            || config.xession.windowManager.awesome.enable
+            || config.xsession.windowManager.awesome.enable
         )
         (
           with pkgs; [
