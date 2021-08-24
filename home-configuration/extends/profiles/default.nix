@@ -1,1 +1,4 @@
-{ ... }: { imports = [ ./base ./browsing ./development ./rice ]; }
+{ ... }: {
+	imports = [ ./base ./browsing ./development ./rice ]; 
+	nixpkgs.config.allowUnfree = true;
+}
