@@ -15,8 +15,6 @@ rec {
     rice.enable = true;
   };
 
-  nixpkgs.config.allowUnfree = true;
-
   xdg = {
     enable = true;
     cacheHome = homeDirectory + "/.local/cache";
