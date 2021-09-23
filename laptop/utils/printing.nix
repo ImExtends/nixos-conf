@@ -15,7 +15,6 @@ in
       drivers = with pkgs; [
         cups-bjnp
         hplip
-        cnijfilter2
         gutenprint
         gutenprintBin
       ];
