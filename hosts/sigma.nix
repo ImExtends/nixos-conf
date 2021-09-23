@@ -8,7 +8,7 @@
     ../laptop/networking
     ../laptop/xserver
     ../hardware-configuration/sigma-hardware.nix
-    ../pkgs/nur.nix
+    #../pkgs/nur.nix
     ../pkgs/nixpkgs.nix
   ];
   #Needed
